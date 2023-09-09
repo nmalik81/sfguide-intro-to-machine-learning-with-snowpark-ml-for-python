@@ -1,0 +1,21 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "Python 3",
+	"image": "mcr.microsoft.com/devcontainers/python:0-3.9",
+	"features": {
+		"ghcr.io/devcontainers/features/conda:1": {
+			"version": "latest"
+		}
+	},
+	"customizations": {
+		"vscode": {
+		  "extensions": [
+			"snowflake.snowflake-vsc",
+			"ms-toolsai.jupyter",
+			"ms-python.python"
+		]
+		}
+	  },
+	"postCreateCommand": "sh ./.devcontainer/postCreateCommands.sh"
+}
